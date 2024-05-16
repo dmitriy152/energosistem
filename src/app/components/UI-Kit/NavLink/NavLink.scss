@@ -1,0 +1,25 @@
+.navlink {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: $transition_def;
+    border-radius: 20px;
+    figure {
+        width: 24px;
+        height: 24px;
+        margin: 0 10px 0 0;
+    }
+    span {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0%;
+        color: $primary-white;
+        transition: $transition_def;
+    }
+    &-active {
+        background-color: $primary-blue;
+    }
+}

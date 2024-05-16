@@ -96,12 +96,11 @@ body {
     position: relative;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: $background;
+    background-color: $primary-white;
 
 }
 main.main {
-    padding-top: 85px;
-    min-height: 100lvh;
+    min-height: calc(100lvh - 140px);
 }
 .main__wrapper {
     display: flex;
@@ -113,7 +112,7 @@ main.main {
     min-height: 100%;
 }
 .wrapper {
-    max-width: 1340px;
+    max-width: 1100px;
     margin: 0 auto;
     @include break(xl){
         padding: 0 32px;
