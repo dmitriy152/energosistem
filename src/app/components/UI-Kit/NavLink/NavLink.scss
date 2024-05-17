@@ -20,6 +20,9 @@
         transition: $transition_def;
     }
     &-active {
-        background-color: $primary-blue;
+        background-color: $primary-white;
+        span {
+            color: $primary-blue;
+        }
     }
 }

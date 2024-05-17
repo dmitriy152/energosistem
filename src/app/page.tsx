@@ -7,7 +7,7 @@ import Reviews from "./components/Reviews/Reviews";
 export default function Home() {
   return (
     <>
-        <Cover />
+        <Cover img="/static/img/cover.jpg" alt="Обложка" title="ООО" subtitle="ЭНЕРГОСИСТЕМЫ"/>
         <Installation />
         <Form />
         <Reviews />
