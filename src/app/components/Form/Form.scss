@@ -1,0 +1,29 @@
+.form {
+    margin: 0 0 100px 0;
+    &__wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 600px);
+    }
+    &__inputs__name {
+        width: 343px;
+        margin: 0 0 35px 0;
+    }
+    &__inputs__phone {
+        width: 343px;
+        margin: 0 0 35px 0;
+    }
+    &__inputs__comments {
+        width: 343px;
+        margin: 0 0 35px 0;
+    }
+    .btn-blue {
+        width: 343px;
+    }
+}

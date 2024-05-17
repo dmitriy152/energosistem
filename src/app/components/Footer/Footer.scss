@@ -5,20 +5,68 @@
         display: flex;
         justify-content: space-between;
     }
-    &__column {
-        display: flex;
-        flex-direction: column;
-    }
     &__logo {
         display: flex;
         align-items: center;
         color: $primary-white;
+        transition: $transition-def;
         svg {
             margin: 0 5px 0 0;
         }
         div {
             display: flex;
             flex-direction: column;
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+    &__column__title {
+        color: $primary-white;
+        margin: 0 0 24px 0;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    &__column__value {
+        display: flex;
+        flex-direction: column;
+        span {
+            color: $primary-white;
+            margin: 0 0 8px 0;
+            font-weight: 500;
+            font-size: 16px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        a {
+            display: flex;
+            max-width: fit-content;
+            color: $primary-white;
+            margin: 0 0 8px 0;
+            font-weight: 400;
+            font-size: 16px;
+            position: relative;
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+            &:last-child {
+                margin: 0 0 20px 0;
+            }
+            &::after {
+                content: "";
+                width: 0%;
+                height: 1px;
+                background-color: $primary-white;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: $transition-def;
+            } 
         }
     }
 }

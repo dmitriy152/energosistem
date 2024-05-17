@@ -1,3 +1,54 @@
 .installation {
-    
+    &__wrapper {
+
+    }
+    &__container {
+        padding: 150px 0;
+        position: relative;
+    }
+    &__title {
+        color: $primary-blue;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 100%;
+        margin: 0 0 32px 0;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 24px 0;
+        padding: 0 0 0 16px;
+    }
+    &__list__item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 16px 0;
+        &:last-child {
+            margin: 0;
+        }
+        svg {
+            width: 32px;
+            height: 32px;
+            margin: 0 16px 0 0;
+        }
+        span {
+            color: $primary-blue;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 100%;
+        }
+    }
+    &__description {
+        max-width: 60%;
+        color: $primary-blue;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
 }

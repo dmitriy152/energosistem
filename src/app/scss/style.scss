@@ -95,8 +95,9 @@ legend {
 body {
     position: relative;
     max-width: 100%;
-    overflow-x: hidden;
     background-color: $primary-white;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
 }
 main.main {

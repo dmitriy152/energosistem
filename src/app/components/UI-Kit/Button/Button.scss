@@ -1,0 +1,253 @@
+//btn-blue
+.btn-blue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    color: $primary-white;
+    background-color: $primary-blue;
+    transition: $transition_def;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0%;
+    border-radius: 8px;
+    max-width: 100%;
+    position: relative;
+    &:hover {
+        background-color: $secondary-blue;
+        svg path {
+            fill: $primary-white;
+        }
+    }
+    &:active {
+        background-color: $secondary-blue;
+        svg path {
+            fill: $primary-white;
+        }
+    }
+    &:disabled {
+        pointer-events: none;
+        cursor: default;
+        background-color: $primary-grey;
+        color: $secondary-grey;
+        svg path {
+            fill: $secondary-grey;
+        }
+    }
+    &__loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transform-origin: center center;
+        width: 24px;
+        height: 24px;
+        z-index: 1;
+        opacity: 0;
+        transition: $transition_def;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        svg path {
+            stroke: $primary-white;
+        }
+    }
+    &.loading {
+        color: transparent;
+        & figure {
+            opacity: 0;
+        }
+        .btn-loader {
+            opacity: 1;
+            animation: btn-login-loader 1.3s 0.5s ease-in-out infinite;
+        }
+    }
+    figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 18px;
+        margin: 0 6px 0 0;
+        transition: $transition_def;
+    }
+    svg path {
+        fill: $primary-white;
+        transition: $transition_def;
+    }
+}
+//btn-transperent
+.btn-transperent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    color: $primary-blue;
+    background-color: transparent;
+    border: 1px solid $primary-blue;
+    transition: $transition_def;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0%;
+    border-radius: 8px;
+    max-width: 100%;
+    position: relative;
+    &:hover {
+        color: $secondary-blue;
+        border: 1px solid $secondary-blue;
+        svg path {
+            fill: $secondary-blue;
+        }
+    }
+    &:active {
+        color: $secondary-blue;
+        border: 1px solid $secondary-blue;
+        svg path {
+            fill: $secondary-blue;
+        }
+    }
+    &:disabled {
+        pointer-events: none;
+        cursor: default;
+        background-color: $primary-white;
+        color: $secondary-grey;
+        border: 1px solid $secondary-grey;
+        svg path {
+            fill: $secondary-grey;
+        }
+    }
+    &__loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 24px;
+        height: 24px;
+        z-index: 1;
+        opacity: 0;
+        transition: $transition_def;
+        svg {
+            width: 20px;
+            height: 21px;
+        }
+        svg path {
+            stroke: $secondary-blue;
+        }
+    }
+    &.loading {
+        color: transparent;
+        & figure {
+            opacity: 0;
+        }
+        .btn-loader {
+            opacity: 1;
+            animation: btn-login-loader 1.3s 0.5s ease-in-out infinite;
+        }
+    }
+    figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 18px;
+        margin: 0 6px 0 0;
+        transition: $transition_def;
+    }
+    svg path {
+        fill: $primary-blue;
+        transition: $transition_def;
+    }
+}
+//btn-grey
+.btn-grey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    color: $primary-blue-dark;
+    background-color: $primary-grey;
+    transition: $transition_def;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0%;
+    border-radius: 8px;
+    max-width: 100%;
+    position: relative;
+    &:hover {
+        background-color: $primary-grey-dark;
+        svg path {
+            fill: $primary-blue-dark;
+        }
+    }
+    &:active {
+        background-color: $primary-grey-dark;
+        svg path {
+            fill: $primary-blue-dark;
+        }
+    }
+    &:disabled {
+        pointer-events: none;
+        cursor: default;
+        background-color: $primary-grey;
+        color: $secondary-grey;
+        svg path {
+            fill: $secondary-grey;
+        }
+    }
+    &__loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 24px;
+        height: 24px;
+        z-index: 1;
+        opacity: 0;
+        transition: $transition_def;
+        svg {
+            width: 20px;
+            height: 21px;
+        }
+        svg path {
+            stroke: $primary-blue-dark;
+        }
+    }
+    &.loading {
+        color: transparent;
+        & figure {
+            opacity: 0;
+        }
+        .btn-loader {
+            opacity: 1;
+            animation: btn-login-loader 1.3s 0.5s ease-in-out infinite;
+        }
+    }
+    figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 18px;
+        margin: 0 6px 0 0;
+        transition: $transition_def;
+    }
+    svg path {
+        fill: $primary-blue-dark;
+        transition: $transition_def;
+    }
+}
+@keyframes btn-login-loader {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}

@@ -25,21 +25,21 @@ export default function Footer() {
                 <div className="footer__column">
                     <div className="footer__column__title">Режим работы:</div>
                     <div className="footer__column__value">
-                        Будние дни с 9:00 до 17:00
+                        <span>Будние дни с 9:00 до 17:00</span>
                     </div>
                     <div className="footer__column__value">
-                        Сб,Вс - выходной
+                        <span>Сб,Вс - выходной</span>
                     </div>
                 </div>
                 <div className="footer__column">
                     <div className="footer__column__title">Контакты:</div>
                     <div className="footer__column__value">
-                        Телефон:
-                        <a href="tel:+7(111)111-11-11">+7(111)111-11-11</a>
-                        <a href="tel:+7(111)111-11-11">+7(111)111-11-11</a>
+                        <span>Телефон:</span>
+                        <a href="tel:+78312910015">+7 (831) 291-00-15</a>
+                        <a href="tel:+78312809969">+7 (831) 280-99-69</a>
                     </div>
                     <div className="footer__column__value">
-                        Email: 
+                        <span>Email: </span>
                         <a href="mailto:energosysteminfo@gmail.com">energosysteminfo@gmail.com</a>
                     </div>
                 </div>
