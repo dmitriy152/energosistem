@@ -40,7 +40,7 @@ export default function Footer() {
                     </div>
                     <div className="footer__column__value">
                         <span>Email: </span>
-                        <a href="mailto:energosysteminfo@gmail.com">energosysteminfo@gmail.com</a>
+                        <a href="mailto:energosysteminfo@mail.ru">energosysteminfo@mail.ru</a>
                     </div>
                 </div>
             </div>

@@ -1,26 +1,28 @@
 import { NextResponse, NextRequest } from 'next/server'
 import nodemailer from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',  // or any other email service you're using
-    auth: {
-        user: "energosysteminfo@gmail.com",  // your email
-        pass: "energosystem123456789"   // your email password
-    }
-});
-
 export async function POST(
     req: NextRequest,
     res: NextResponse,
 ) {
     try {
+        const transporter = nodemailer.createTransport({
+            host: "smtp.mail.ru",
+            port: 465,
+            secure: true,
+            auth: {
+                user: "energosysteminfo@mail.ru", 
+                pass: "tAtPebVusUPFqqinm3SV" 
+            }
+        });
+
         const body = await req.json();
         const { firstName, phone, comments } = body;
         const mailOptions = {
-            from: "energosysteminfo@gmail.com",            // sender address
-            to: "energosysteminfo@gmail.com",  // list of receivers
-            subject: 'Заявка с сайта',  // Subject line
-            text: `Name: ${firstName}\nPhone: ${phone}\nComments: ${comments}` // plain text body
+            from: "energosysteminfo@mail.ru",
+            to: "energosysteminfo@mail.ru",
+            subject: 'Заявка с сайта',
+            text: `Name: ${firstName}\nPhone: ${phone}\nComments: ${comments}`
         };
         await transporter.sendMail(mailOptions);
 
