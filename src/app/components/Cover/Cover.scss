@@ -1,5 +1,27 @@
 .cover {
     position: relative;
+    &::after {
+        content: "";
+        width: 480px;
+        height: 45px;
+        background-image: url("/static/img/cover-affter.svg");
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    &::before {
+        content: "";
+        width: 480px;
+        height: 45px;
+        background-image: url("/static/img/cover-before.svg");
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
     &__img__container {
         position: relative;
         &::after {

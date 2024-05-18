@@ -5,6 +5,12 @@
         align-items: flex-end;
         justify-content: space-between;
     }
+    &__img {
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+        pointer-events: none;
+    }
     &__inputs {
         display: flex;
         flex-direction: column;

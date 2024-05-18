@@ -45,7 +45,8 @@ export default function Form() {
     return(
         <section className="form">
             <div className="form__wrapper wrapper">
-                <Image 
+                <Image
+                    className="form__img"
                     src="/static/img/form__img.png"
                     alt="form__img"
                     width={500}
