@@ -27,6 +27,11 @@
     &__column {
         display: flex;
         flex-direction: column;
+        &:nth-child(2){
+            @include break(sm){
+                margin: 0 0 16px 0;
+            }
+        }
     }
     &__column__title {
         color: $primary-white;
