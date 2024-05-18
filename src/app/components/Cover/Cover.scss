@@ -10,6 +10,9 @@
         left: 0;
         bottom: 0;
         z-index: 1;
+        @include break(lg){
+            content: none;
+        }
     }
     &::before {
         content: "";
@@ -21,6 +24,9 @@
         right: 0;
         bottom: 0;
         z-index: 1;
+        @include break(lg){
+            content: none;
+        }
     }
     &__img__container {
         position: relative;
@@ -41,6 +47,12 @@
         max-height: 700px;
         object-fit: cover;
         object-position: 100%;
+        @include break(md){
+            max-height: 500px;
+        }
+        @include break(sm){
+            max-height: 350px;
+        }
     }
     &__title {
         position: absolute;
@@ -54,5 +66,11 @@
         font-weight: 700;
         font-size: 72px;
         line-height: 104%;
+        @include break(md){
+            font-size: 50px;
+        }
+        @include break(sm){
+            font-size: 32px;
+        }
     }
 }

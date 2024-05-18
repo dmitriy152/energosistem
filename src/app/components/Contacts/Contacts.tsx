@@ -17,7 +17,7 @@ export default function Contacts() {
                             <a href="tel:+78312809969">+7 (831) 280-99-69</a>
                         </div>
                         <div className="contacts__info__location">
-                            <span className="contacts__info__phone__location">Юридический адрес:</span>
+                            <span className="contacts__info__location__title">Юридический адрес:</span>
                             <a href="https://yandex.ru/maps/org/energosistemy/1682729173/?ll=43.874590%2C56.353395&z=17" target='_blank'>
                                 Нижний Новгород, улица Заводской парк, 29
                             </a>

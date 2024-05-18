@@ -1,7 +1,20 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { useState, useEffect } from'react';
 export default function Reviews() {
+    const [slidesPerView, setSlidesPerView] = useState(2);
+
+    useEffect(() => {
+        function handleResize() {
+            setSlidesPerView(window.innerWidth < 900 ? 1 : 2);
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <section className="reviews">
             <div className="reviews__wrapper wrapper">
@@ -11,7 +24,7 @@ export default function Reviews() {
                         className='reviews__swiper'
                         modules={[Pagination]}
                         spaceBetween={50}
-                        slidesPerView={2}
+                        slidesPerView={slidesPerView}
                         onSlideChange={() => console.log('slide change')}
                         pagination={{ clickable: true }}
                         onSwiper={(swiper) => console.log(swiper)}

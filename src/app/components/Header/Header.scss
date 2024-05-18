@@ -5,14 +5,117 @@
     transform: translateX(-50%);
     width: 100%;
     z-index: 100;
+    @include break(lg){
+        top: 0;
+        position: fixed;
+    }
     &__wrapper {
         
     }
     &__navigation {
+        @include break(lg){
+            position: absolute;
+            left: -100vw;
+            top: 0;
+            transition: $transition-def;
+        }
+    }
+    &__navigation--opened {
+        @include break(lg){
+            height: 100lvh;
+            width: 50%;
+            left: 0;
+        }
+        @include break(sm){
+            width: 100%;
+        }
+        
+    }
+    &__navigation__list {
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: $secondary-blue;
         border-radius: 20px;
+        @include break(lg){
+            padding: 32px;
+            justify-content: flex-start;
+            flex-direction: column;
+            border-radius: 0;
+            width: 100%;
+            height: 100lvh;
+            background-color: $primary-blue;
+        }
+    }
+    &__navigation__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+    &__gamburger {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 48px;
+        right: 48px;
+        background-color: $primary-blue;
+        border-radius: 50%;
+        transform: translate(50%,-50%);
+        @include break(sm){
+            top: 32px;
+            right: 32px;
+        }
+        .line {
+            width: 22px;
+            height: 2px;
+            border-radius: 3px;
+            background-color: $primary-white;
+            position: relative;
+            transition: $transition-def;
+            &::after {
+                content: "";
+                width: 22px;
+                height: 2px;
+                border-radius: 3px;
+                background-color: $primary-white;
+                position: absolute;
+                top: -7px;
+                left: 0;
+                transition: $transition-def;
+            }
+            &::before {
+                content: "";
+                width: 22px;
+                height: 2px;
+                border-radius: 3px;
+                background-color: $primary-white;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+                transition: $transition-def;
+            }
+        }
+        @include break(lg){
+            display: flex;
+        }
+    }
+    &__gamburger--opened {
+        .line {
+            transform: rotate(45deg);
+            &::after {
+                top: 0;
+                transform: rotate(90deg);
+            }
+            &::before {
+                opacity: 0;
+            }
+        }
     }
 }

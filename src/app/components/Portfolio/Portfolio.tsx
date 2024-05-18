@@ -2,7 +2,21 @@
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { useState, useEffect } from'react';
 export default function Portfolio() {
+    const [slidesPerView, setSlidesPerView] = useState(2);
+
+    useEffect(() => {
+        function handleResize() {
+            setSlidesPerView(window.innerWidth < 1000 ? 1 : 2.5);
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     interface Image {
         src: string
         alt: string
@@ -55,7 +69,7 @@ export default function Portfolio() {
                     className='portfolio__swiper'
                     modules={[Pagination]}
                     spaceBetween={16}
-                    slidesPerView={2}
+                    slidesPerView={slidesPerView}
                     initialSlide={1}
                     centeredSlides={true}
                     onSlideChange={() => console.log('slide change')}

@@ -4,12 +4,18 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        @include break(sm){
+            flex-direction: column;
+        }
     }
     &__logo {
         display: flex;
         align-items: center;
         color: $primary-white;
         transition: $transition-def;
+        @include break(sm){
+            margin: 0 0 32px 0;
+        }
         svg {
             margin: 0 5px 0 0;
         }

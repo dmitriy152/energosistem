@@ -1,13 +1,15 @@
 .reviews {
     margin: 50px 0 100px;
-    &__wrapper {
-
+    @include break(sm){
+        margin: 50px 0 50px 0;
     }
     &__container {
         padding: 48px 48px 48px 48px;
         background-color: $primary-blue;
         border-radius: 24px;
-
+        @include break(sm){
+            padding: 24px;
+        }
     }
     &__title {
         color: $primary-white;
@@ -15,6 +17,10 @@
         font-size: 36px;
         line-height: 100%;
         margin: 0 0 32px 0;
+        @include break(sm){
+            font-size: 24px;
+            margin: 0 0 24px;
+        }
     }
     .swiper {
         padding: 0 0 48px 0;

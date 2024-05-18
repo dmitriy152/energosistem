@@ -5,6 +5,9 @@
     &__container {
         padding: 150px 0;
         position: relative;
+        @include break(lg){
+            padding: 32px 0;
+        }
     }
     &__title {
         color: $primary-blue;
@@ -12,6 +15,9 @@
         font-size: 36px;
         line-height: 100%;
         margin: 0 0 32px 0;
+        @include break(sm){
+            font-size: 24px;
+        }
     }
     &__list {
         display: flex;
@@ -36,6 +42,9 @@
             font-weight: 500;
             font-size: 24px;
             line-height: 100%;
+            @include break(sm){
+                font-size: 16px;
+            }
         }
     }
     &__description {
@@ -44,11 +53,20 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 100%;
+        @include break(md){
+            max-width: 100%;
+        }
+        @include break(sm){
+            font-size: 16px;
+        }
     }
     &__icon {
         position: absolute;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
+        @include break(lg){
+            display: none;
+        }
     }
 }

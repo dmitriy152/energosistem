@@ -1,5 +1,8 @@
 .form {
     margin: 0 0 100px 0;
+    @include break(sm){
+        margin: 50px 0 50px;
+    }
     &__wrapper {
         display: flex;
         align-items: flex-end;
@@ -10,26 +13,51 @@
         height: 400px;
         object-fit: cover;
         pointer-events: none;
+        @include break(lg){
+            width: 40%;
+            height: auto;
+        }
+        @include break(md){
+           display: none;
+        }
     }
     &__inputs {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: calc(100% - 600px);
+        @include break(lg){
+            width: 55%;
+        }
+        @include break(md){
+            width: 100%;
+        }
     }
     &__inputs__name {
         width: 343px;
         margin: 0 0 35px 0;
+        @include break(lg){
+            width: 100%;
+        }
     }
     &__inputs__phone {
         width: 343px;
         margin: 0 0 35px 0;
+        @include break(lg){
+            width: 100%;
+        }
     }
     &__inputs__comments {
         width: 343px;
         margin: 0 0 35px 0;
+        @include break(lg){
+            width: 100%;
+        }
     }
     .btn-blue {
         width: 343px;
+        @include break(lg){
+            width: 100%;
+        }
     }
 }
