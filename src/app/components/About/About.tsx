@@ -11,7 +11,7 @@ export default function About() {
                         и строительно отделочных  работах связанных
                         с отоплением.
                     </p>
-                    <h3 className="about__subtitle">Другия направления компании:</h3>
+                    <h3 className="about__subtitle">Другие направления компании:</h3>
                     <ul className="about__list">
                         <li className="about__list__item">
                             Распределение пара и горячей воды по тепловым сетям
